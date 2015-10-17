@@ -47,3 +47,4 @@ end
 
 gem 'simple_form'
 gem 'bootstrap-sass'
+gem 'rails_admin', '~> 0.7.0'
