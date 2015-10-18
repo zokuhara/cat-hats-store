@@ -1,2 +1,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+.page-header {
+  h4 {
+    text-align: right;
+    clear: both;
+  }
+}

@@ -1,7 +1,3 @@
-<h1>Hats#index</h1>
-
-<%= link_to "Log Out", sign_out_path, method: :delete %>
-
 <% @hats.each do |hat| %>
   <div class="hat">
     <div class="col-sm-6 col-md-4">
@@ -11,7 +7,7 @@
           <h3><%= hat.name %></h3>
           <p><%= hat.description %></p>
           <p><%= number_to_currency hat.price %></p>
-          <p><a href="#" class="btn btn-default" role="button">Button</a></p>
+          <%= link_to "Add to Cart", add_to_cart_path(hat_id: hat.id), method: :post, class: "btn btn-default btn-block" %>
         </div>
       </div>
     </div>

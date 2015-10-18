@@ -9,8 +9,8 @@
 <body>
   <div class="container">
     <nav class="page-header">
-      <h1>Cat Hats!<small> Unrequited love is a terrible thing to waste</small></h1>
-
+        <h1><%= link_to "Cat Hats!", root_path %><small> Unrequited love is a terrible thing to waste</small></h1>
+          <h4><%= link_to "Log Out", sign_out_path, method: :delete %></h4>
     </nav>
 
     <%= yield %>

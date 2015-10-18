@@ -17,4 +17,8 @@ class ApplicationController < ActionController::Base
     session[:user_id] = @user.id
   end
 
+  def sign_out
+    session.delete :user_id
+  end
+
 end

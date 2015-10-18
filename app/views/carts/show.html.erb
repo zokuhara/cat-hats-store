@@ -1,0 +1,22 @@
+<h1>Carts#show</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th>Remove</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @cart.cart_items.each do |cart_item| %>
+      <tr>
+        <td><%= cart_item.hat.name %></td>
+        <td><%= cart_item.quantity %></td>
+        <td><%= number_to_currency cart_item.price %></td>
+        <td><%= link_to "Remove", remove_from_cart_path(hat_id: cart_item.hat.id), method: :delete, class: "btn btn-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

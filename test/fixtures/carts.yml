@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  completed: false
+  price: 1
+  permalink: MyString
+  name: MyString
+
+two:
+  user_id: 1
+  completed: false
+  price: 1
+  permalink: MyString
+  name: MyString
