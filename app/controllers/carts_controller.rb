@@ -16,6 +16,12 @@ class CartsController < ApplicationController
     end
   end
 
+  def receipt
+
+    @sale = Payola::Sale.find_by guid: params[:sale_guid]
+    @cart = @sale.product
+  end
+
   def add
     #identify the hat to be added to cart
     @hat = Hat.find params[:hat_id]
