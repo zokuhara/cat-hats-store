@@ -1,5 +1,7 @@
 class Hat < ActiveRecord::Base
 
+  attachment :hat_image
+
   def price=(dollars)
     self.price_in_cents = dollars.to_f * 100
   end

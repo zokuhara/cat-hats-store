@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151017190623) do
+ActiveRecord::Schema.define(version: 20151020004725) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20151017190623) do
     t.integer  "price_in_cents"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.string   "hat_image"
   end
 
   create_table "payola_affiliates", force: :cascade do |t|
@@ -141,6 +142,12 @@ ActiveRecord::Schema.define(version: 20151017190623) do
   end
 
   add_index "payola_subscriptions", ["guid"], name: "index_payola_subscriptions_on_guid", using: :btree
+
+  create_table "refile_attachments", force: :cascade do |t|
+    t.string "namespace", null: false
+  end
+
+  add_index "refile_attachments", ["namespace"], name: "index_refile_attachments_on_namespace", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email"

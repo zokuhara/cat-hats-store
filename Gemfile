@@ -50,3 +50,6 @@ gem 'rails_admin', '~> 0.7.0'
 gem 'payola-payments'
 gem "figaro"
 gem 'rails_12factor', group: :production
+gem "refile", require: "refile/rails"
+gem "refile-mini_magick"
+gem 'refile-postgres'
