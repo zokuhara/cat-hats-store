@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-
-
   mount Payola::Engine => '/payola', as: :payola
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'hats#index'

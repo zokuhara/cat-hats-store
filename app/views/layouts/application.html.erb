@@ -10,7 +10,17 @@
   <div class="container">
     <nav class="page-header">
         <h1><%= link_to "Cat Hats!", root_path %><small> Unrequited love is a terrible thing to waste</small></h1>
-          <h4><%= link_to "Log Out", sign_out_path, method: :delete %></h4>
+        <ul class="nav navbar-nav navbar-right">
+          <% if @current_user %>
+          <li>
+            <h4><%= link_to "Log Out", sign_out_path, method: :delete %></h4>
+          </li>
+          <% else %>
+          <li>
+            <%= link_to "Sign-In", sign_in_path %>
+          </li>
+          <% end %>
+        </ul>
     </nav>
 
     <%= yield %>

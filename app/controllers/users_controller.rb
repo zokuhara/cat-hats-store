@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new params.require(:user).permit(:username, :email, :password, :password_confirmation)
     if @user.save
-      sign_in @user
+      session[:user_id] = @user.id
       redirect_to root_path, notice: "Welcome to Cat Hats!"
     else
       render :new
